@@ -1,9 +1,9 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { Animal } from './Animal.model';
+import { Animal } from './animal.model';
 
 
 @Component({
-  selector: 'new-Animal',
+  selector: 'new-animal',
   template: `
     <h1>New Animal</h1>
     <hr>
@@ -43,15 +43,15 @@ import { Animal } from './Animal.model';
       <label>Dislikes:</label>
       <input class="form-control" #newDislikes><br>
     </div>
-    <button class="btn btn-default" (click)="submitForm(newName.value, newBrand.value, newPrice.value, newAlcoholContent.value, newIbu.value, newQuantity.value, newDescription.value, newType.value); newName.value=''; newBrand.value=''; newPrice.value=''; newAlcoholContent.value=''; newIbu.value=''; newQuantity.value=''; newDescription.value=''; newType.value='';">Add</button>
+    <button class="btn btn-default" (click)="submitForm(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value); newSpecies.value=''; newName.value=''; newAge.value=''; newDiet.value=''; newLocation.value=''; newCaretakers.value=''; newSex.value=''; newLikes.value=''; newDislikes.value='';">Add</button>
   `
 })
 
 export class NewAnimalComponent {
   @Output() newAnimalSender = new EventEmitter();
 
-  submitForm(name: string, brand: string, price: number, alcohol_content: number, ibu: number, quantity: number, description: string, type: string) {
-    var newAnimalToAdd: Animal = new Animal(name, brand, price, alcohol_content, ibu, quantity, description, type);
+  submitForm(species: string, name: string, age: number, diet: string, location: string, caretakers: number, sex: string, likes: string, dislikes: string) {
+    var newAnimalToAdd: Animal = new Animal(species, name, age, diet, location, caretakers, sex, likes, dislikes);
     this.newAnimalSender.emit(newAnimalToAdd);
   }
 }
