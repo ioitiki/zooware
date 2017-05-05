@@ -4,23 +4,10 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'edit-animal',
   template: `
-  <div>
-<div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog"
-     aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog"v aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
         <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <button type="button" class="close"
-                   data-dismiss="modal">
-                       <span aria-hidden="true">&times;</span>
-                       <span class="sr-only">Close</span>
-                </button>
-            </div>
-
-            <!-- Modal Body -->
-            <div class="modal-body">
-
+          <div class="modal-body">
             <div *ngIf="childSelectedAnimal">
               <h2>{{childSelectedAnimal.name}}</h2>
               <label>Edit Name:</label>
@@ -34,13 +21,9 @@ import { Animal } from './animal.model';
                 Save changes
             </button>
           </div>
-
-
-
         </div>
+      </div>
     </div>
-</div>
-
   `
 })
 

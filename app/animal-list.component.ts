@@ -40,7 +40,7 @@ import { NewAnimalComponent } from './new-animal.component';
           <li>Likes: {{currentAnimal.likes}}</li>
           <li>Dislikes: {{currentAnimal.dislikes}}</li>
         </ul>
-        <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button>
+        <button (click)="editButtonHasBeenClicked(currentAnimal)" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNorm">Edit Animal</button>
       </div>
     </div>
   </div>
@@ -57,7 +57,7 @@ import { NewAnimalComponent } from './new-animal.component';
           <li>Likes: {{currentAnimal.likes}}</li>
           <li>Dislikes: {{currentAnimal.dislikes}}</li>
         </ul>
-        <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button>
+        <button (click)="editButtonHasBeenClicked(currentAnimal)" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNorm">Edit Animal</button>
       </div>
     </div>
   </div>
