@@ -17,13 +17,13 @@ import { NewAnimalComponent } from './new-animal.component';
         <ul>
           <li>Age: {{currentAnimal.age}}</li>
           <li>Diet: {{currentAnimal.diet}}</li>
-          <li>Location: {{currentAnimal.Location}}</li>
+          <li>Location: {{currentAnimal.location}}</li>
           <li>Caretakers: {{currentAnimal.caretakers}}</li>
           <li>Sex: {{currentAnimal.sex}}</li>
           <li>Likes: {{currentAnimal.likes}}</li>
           <li>Dislikes: {{currentAnimal.dislikes}}</li>
         </ul>
-        <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button>
+        <button (click)="editButtonHasBeenClicked(currentAnimal)" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNorm">Edit Animal</button>
       </div>
     </div>
   </div>
@@ -34,7 +34,7 @@ import { NewAnimalComponent } from './new-animal.component';
         <ul>
           <li>Age: {{currentAnimal.age}}</li>
           <li>Diet: {{currentAnimal.diet}}</li>
-          <li>Location: {{currentAnimal.Location}}</li>
+          <li>Location: {{currentAnimal.location}}</li>
           <li>Caretakers: {{currentAnimal.caretakers}}</li>
           <li>Sex: {{currentAnimal.sex}}</li>
           <li>Likes: {{currentAnimal.likes}}</li>
@@ -51,7 +51,7 @@ import { NewAnimalComponent } from './new-animal.component';
         <ul>
           <li>Age: {{currentAnimal.age}}</li>
           <li>Diet: {{currentAnimal.diet}}</li>
-          <li>Location: {{currentAnimal.Location}}</li>
+          <li>Location: {{currentAnimal.location}}</li>
           <li>Caretakers: {{currentAnimal.caretakers}}</li>
           <li>Sex: {{currentAnimal.sex}}</li>
           <li>Likes: {{currentAnimal.likes}}</li>
