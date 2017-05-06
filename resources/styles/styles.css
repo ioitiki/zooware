@@ -1,7 +1,8 @@
 select {
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
+
 #new-animal-btn {
   margin-right: 10px;
 }
@@ -20,8 +21,15 @@ select {
   font-variant-caps: small-caps;
 }
 
+td {
+  font-size: 17px;
+  font-weight: bold;
+  font-family: monospace;
+}
+
 .panel-heading {
   font-size: 25px;
+  font-weight: bold;
 }
 
 .btn {
