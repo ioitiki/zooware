@@ -27,6 +27,12 @@ export class AgePipe implements PipeTransform {
           output.push(input[i]);
         }
       }
+    } else if (desiredAge === "meatAnimal") {
+      for (let i = 0; i < input.length; i++) {
+        if (input[i].diet.toLowerCase() !== "herbivore"){
+          output.push(input[i]);
+        }
+      }
     }
     return output;
   }
