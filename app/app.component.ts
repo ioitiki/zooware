@@ -11,6 +11,7 @@ import { Animal } from './animal.model';
         <div class="navbar-header">
           <a href="/"><img src="./resources/images/logo.png" id="home-icon" /></a>
         </div>
+        <a href="./about.html"><button class="btn navbar-right" id="about">About</button></a>
         <a href="/"><img src="./resources/images/title.png" class="center-block"/></a>
       </div>
     </nav>

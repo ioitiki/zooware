@@ -59,7 +59,7 @@ import { NewAnimalComponent } from './new-animal.component';
   </div>
   <div *ngIf="filterByAge ==='youngAnimal'">
     <div class="panel panel-danger" *ngFor="let currentAnimal of childAnimalList | agePipe:filterByAge">
-      <div class="panel-heading">{{currentAnimal.name}}, {{currentAnimal.species}}</div>
+      <div class="panel-heading">{{currentAnimal.name}} ({{currentAnimal.species}})<button (click)="editButtonHasBeenClicked(currentAnimal)" class="btn btn-primary btn-md" id="edit" data-toggle="modal" data-target="#myModalNorm">Edit Animal</button></div>
       <div class="panel-body">
         <table class="table table-hover table-bordered">
           <tbody>
@@ -107,7 +107,7 @@ import { NewAnimalComponent } from './new-animal.component';
   </div>
   <div *ngIf="filterByAge==='matureAnimal'">
     <div class="panel panel-danger" *ngFor="let currentAnimal of childAnimalList | agePipe:filterByAge">
-      <div class="panel-heading">{{currentAnimal.name}}, {{currentAnimal.species}}</div>
+      <div class="panel-heading">{{currentAnimal.name}} ({{currentAnimal.species}})<button (click)="editButtonHasBeenClicked(currentAnimal)" class="btn btn-primary btn-md" id="edit" data-toggle="modal" data-target="#myModalNorm">Edit Animal</button></div>
       <div class="panel-body">
         <table class="table table-hover table-bordered">
           <tbody>

@@ -1,3 +1,6 @@
+body {
+  background-color: lightgray;
+}
 select {
   font-size: 30px;
   margin-bottom: 14px;
@@ -14,10 +17,26 @@ select {
   height: 58px;
 }
 
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    height: 155px; /* .push must be the same height as .footer */
+}
+
+#footer {
+  text-align: center;
+}
+
 #about {
+  background-color: lightyellow;
   margin-right: 3px;
-  margin-top: 11px;
+  margin-top: 16px;
   color: black;
+  font-weight: bold;
   font-variant-caps: small-caps;
 }
 
@@ -43,5 +62,5 @@ td {
 .btn {
   font-variant-caps: small-caps;
   color: white;
-  font-size: 30px;
+  font-size: 26px;
 }
