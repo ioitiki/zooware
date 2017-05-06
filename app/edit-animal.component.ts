@@ -10,12 +10,13 @@ import { Animal } from './animal.model';
           <div class="modal-body">
             <div *ngIf="childSelectedAnimal">
               <h2>{{childSelectedAnimal.name}}</h2>
+              <hr>
               <label>Edit Name:</label>
-              <input [(ngModel)]="childSelectedAnimal.name" /><br>
-              <label>Edit Age:</label>
-              <input type="number" [(ngModel)]="childSelectedAnimal.age" /><br>
-              <label>Edit Caretakers:</label>
-              <input type="number" [(ngModel)]="childSelectedAnimal.caretakers" /><br>
+              <input class="form-control" [(ngModel)]="childSelectedAnimal.name" /><br>
+              <label>Edit Age:</label><br>
+              <input class="form-control" type="number" [(ngModel)]="childSelectedAnimal.age" /><br>
+              <label>Edit Caretakers:</label><br>
+              <input class="form-control" type="number" [(ngModel)]="childSelectedAnimal.caretakers" /><br>
             </div>
             <button type="button" class="btn btn-primary" (click)="doneButtonClicked()" data-dismiss="modal">
                 Save changes
