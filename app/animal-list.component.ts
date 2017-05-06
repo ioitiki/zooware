@@ -5,7 +5,7 @@ import { NewAnimalComponent } from './new-animal.component';
 @Component({
   selector: 'animal-list',
   template: `
-  <select class="selectpicker" (change)="onChange($event.target.value)">
+  <select (change)="onChange($event.target.value)">
     <option value="all">All Aniamls</option>
     <option value="youngAnimal">Young Aniamls</option>
     <option value="matureAnimal">Mature Aniamls</option>
@@ -14,16 +14,39 @@ import { NewAnimalComponent } from './new-animal.component';
     <div class="panel panel-danger" *ngFor="let currentAnimal of childAnimalList | agePipe:filterByAge">
       <div class="panel-heading">{{currentAnimal.name}}, {{currentAnimal.species}}</div>
       <div class="panel-body">
-        <ul>
-          <li>Age: {{currentAnimal.age}}</li>
-          <li>Diet: {{currentAnimal.diet}}</li>
-          <li>Location: {{currentAnimal.location}}</li>
-          <li>Caretakers: {{currentAnimal.caretakers}}</li>
-          <li>Sex: {{currentAnimal.sex}}</li>
-          <li>Likes: {{currentAnimal.likes}}</li>
-          <li>Dislikes: {{currentAnimal.dislikes}}</li>
-        </ul>
-        <button (click)="editButtonHasBeenClicked(currentAnimal)" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNorm">Edit Animal</button>
+        <table class="table table-hover">
+          <tbody>
+            <tr class="active">
+              <td>Age:</td>
+              <td>{{currentAnimal.age}}</td>
+            </tr>
+            <tr class="warning">
+              <td>Diet:</td>
+              <td>{{currentAnimal.diet}}</td>
+            </tr>
+            <tr class="active">
+              <td>Location:</td>
+              <td>{{currentAnimal.location}}</td>
+            </tr>
+            <tr class="warning">
+              <td>Caretakers:</td>
+              <td>{{currentAnimal.caretakers}}</td>
+            </tr>
+            <tr class="active">
+              <td>Sex:</td>
+              <td>{{currentAnimal.sex}}</td>
+            </tr>
+            <tr class="warning">
+              <td>Likes:</td>
+              <td>{{currentAnimal.likes}}</td>
+            </tr>
+            <tr class="active">
+              <td>Dislikes:</td>
+              <td>{{currentAnimal.dislikes}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <button (click)="editButtonHasBeenClicked(currentAnimal)" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">Edit Animal</button>
       </div>
     </div>
   </div>
@@ -31,33 +54,79 @@ import { NewAnimalComponent } from './new-animal.component';
     <div class="panel panel-danger" *ngFor="let currentAnimal of childAnimalList | agePipe:filterByAge">
       <div class="panel-heading">{{currentAnimal.name}}</div>
       <div class="panel-body">
-        <ul>
-          <li>Age: {{currentAnimal.age}}</li>
-          <li>Diet: {{currentAnimal.diet}}</li>
-          <li>Location: {{currentAnimal.location}}</li>
-          <li>Caretakers: {{currentAnimal.caretakers}}</li>
-          <li>Sex: {{currentAnimal.sex}}</li>
-          <li>Likes: {{currentAnimal.likes}}</li>
-          <li>Dislikes: {{currentAnimal.dislikes}}</li>
-        </ul>
-        <button (click)="editButtonHasBeenClicked(currentAnimal)" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNorm">Edit Animal</button>
+        <table class="table">
+          <tbody>
+            <tr class="active">
+              <td>Age:</td>
+              <td>{{currentAnimal.age}}</td>
+            </tr>
+            <tr class="warning">
+              <td>Diet:</td>
+              <td>{{currentAnimal.diet}}</td>
+            </tr>
+            <tr class="active">
+              <td>Location:</td>
+              <td>{{currentAnimal.location}}</td>
+            </tr>
+            <tr class="warning">
+              <td>Caretakers:</td>
+              <td>{{currentAnimal.caretakers}}</td>
+            </tr>
+            <tr class="active">
+              <td>Sex:</td>
+              <td>{{currentAnimal.sex}}</td>
+            </tr>
+            <tr class="warning">
+              <td>Likes:</td>
+              <td>{{currentAnimal.likes}}</td>
+            </tr>
+            <tr class="active">
+              <td>Dislikes:</td>
+              <td>{{currentAnimal.dislikes}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <button (click)="editButtonHasBeenClicked(currentAnimal)" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">Edit Animal</button>
       </div>
     </div>
   </div>
   <div *ngIf="filterByAge==='matureAnimal'">
     <div class="panel panel-danger" *ngFor="let currentAnimal of childAnimalList | agePipe:filterByAge">
-      <div class="panel-heading">{{currentAnimal.name}}</div>
+      <div class="panel-heading">{{currentAnimal.name}}, {{currentAnimal.species}}</div>
       <div class="panel-body">
-        <ul>
-          <li>Age: {{currentAnimal.age}}</li>
-          <li>Diet: {{currentAnimal.diet}}</li>
-          <li>Location: {{currentAnimal.location}}</li>
-          <li>Caretakers: {{currentAnimal.caretakers}}</li>
-          <li>Sex: {{currentAnimal.sex}}</li>
-          <li>Likes: {{currentAnimal.likes}}</li>
-          <li>Dislikes: {{currentAnimal.dislikes}}</li>
-        </ul>
-        <button (click)="editButtonHasBeenClicked(currentAnimal)" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNorm">Edit Animal</button>
+        <table class="table">
+          <tbody>
+            <tr class="active">
+              <td>Age:</td>
+              <td>{{currentAnimal.age}}</td>
+            </tr>
+            <tr class="warning">
+              <td>Diet:</td>
+              <td>{{currentAnimal.diet}}</td>
+            </tr>
+            <tr class="active">
+              <td>Location:</td>
+              <td>{{currentAnimal.location}}</td>
+            </tr>
+            <tr class="warning">
+              <td>Caretakers:</td>
+              <td>{{currentAnimal.caretakers}}</td>
+            </tr>
+            <tr class="active">
+              <td>Sex:</td>
+              <td>{{currentAnimal.sex}}</td>
+            </tr>
+            <tr class="warning">
+              <td>Likes:</td>
+              <td>{{currentAnimal.likes}}</td>
+            </tr>
+            <tr class="active">
+              <td>Dislikes:</td>
+              <td>{{currentAnimal.dislikes}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <button (click)="editButtonHasBeenClicked(currentAnimal)" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">Edit Animal</button>
       </div>
     </div>
   </div>
