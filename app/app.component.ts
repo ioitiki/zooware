@@ -6,21 +6,12 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'app-root',
   template: `
-    <nav class="navbar">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a href="/"><img src="./resources/images/icon.png" id="home-icon" /></a>
-        </div>
-      </div>
-    </nav>
-    <div class="container">
-      <h1>ZooWare</h1>
-      <hr>
-      <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
-      <hr>
-      <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
-      <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
-    </div>
+    <button id="new-animal-btn" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNew">New Animal</button>
+    <hr>
+    <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
+    <hr>
+    <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
+    <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
   `
 })
 

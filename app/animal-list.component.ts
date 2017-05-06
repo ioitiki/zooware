@@ -5,7 +5,7 @@ import { NewAnimalComponent } from './new-animal.component';
 @Component({
   selector: 'animal-list',
   template: `
-  <select class="selectpicker" (change)="onChange($event.target.value)">
+  <select (change)="onChange($event.target.value)">
     <option value="all">All Aniamls</option>
     <option value="youngAnimal">Young Aniamls</option>
     <option value="matureAnimal">Mature Aniamls</option>
