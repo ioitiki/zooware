@@ -16,6 +16,10 @@
   font-variant-caps: small-caps;
 }
 
+.panel-heading {
+  font-size: 25px;
+}
+
 .btn {
   font-variant-caps: small-caps;
 }

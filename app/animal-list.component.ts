@@ -5,13 +5,13 @@ import { NewAnimalComponent } from './new-animal.component';
 @Component({
   selector: 'animal-list',
   template: `
-  <select (change)="onChange($event.target.value)">
+  <select class="selectpicker" (change)="onChange($event.target.value)">
     <option value="all">All Aniamls</option>
     <option value="youngAnimal">Young Aniamls</option>
     <option value="matureAnimal">Mature Aniamls</option>
   </select>
   <div *ngIf="filterByAge==='all'">
-    <div class="panel panel-default" *ngFor="let currentAnimal of childAnimalList | agePipe:filterByAge">
+    <div class="panel panel-danger" *ngFor="let currentAnimal of childAnimalList | agePipe:filterByAge">
       <div class="panel-heading">{{currentAnimal.name}}, {{currentAnimal.species}}</div>
       <div class="panel-body">
         <ul>
@@ -28,7 +28,7 @@ import { NewAnimalComponent } from './new-animal.component';
     </div>
   </div>
   <div *ngIf="filterByAge ==='youngAnimal'">
-    <div class="panel panel-default" *ngFor="let currentAnimal of childAnimalList | agePipe:filterByAge">
+    <div class="panel panel-danger" *ngFor="let currentAnimal of childAnimalList | agePipe:filterByAge">
       <div class="panel-heading">{{currentAnimal.name}}</div>
       <div class="panel-body">
         <ul>
@@ -45,7 +45,7 @@ import { NewAnimalComponent } from './new-animal.component';
     </div>
   </div>
   <div *ngIf="filterByAge==='matureAnimal'">
-    <div class="panel panel-default" *ngFor="let currentAnimal of childAnimalList | agePipe:filterByAge">
+    <div class="panel panel-danger" *ngFor="let currentAnimal of childAnimalList | agePipe:filterByAge">
       <div class="panel-heading">{{currentAnimal.name}}</div>
       <div class="panel-body">
         <ul>

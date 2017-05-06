@@ -47,16 +47,13 @@ import { Animal } from './animal.model';
             <label>Dislikes:</label>
             <input class="form-control" #newDislikes><br>
           </div>
-            <button type="button" class="btn btn-primary btn-sm" (click)="submitForm(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value); newSpecies.value=''; newName.value=''; newAge.value=''; newDiet.value=''; newLocation.value=''; newCaretakers.value=''; newSex.value=''; newLikes.value=''; newDislikes.value='';" data-dismiss="modal">
+            <button type="button" class="btn btn-primary" (click)="submitForm(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value); newSpecies.value=''; newName.value=''; newAge.value=''; newDiet.value=''; newLocation.value=''; newCaretakers.value=''; newSex.value=''; newLikes.value=''; newDislikes.value='';" data-dismiss="modal">
                 Save changes
             </button>
           </div>
         </div>
       </div>
     </div>
-
-
-
   `
 })
 
