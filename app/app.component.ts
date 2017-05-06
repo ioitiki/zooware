@@ -11,11 +11,11 @@ import { Animal } from './animal.model';
         <div class="navbar-header">
           <a href="/"><img src="./resources/images/logo.png" id="home-icon" /></a>
         </div>
+        <a href="/"><img src="./resources/images/title.png" class="center-block"/></a>
       </div>
     </nav>
     <div class="container">
-      <a href="/"><img src="./resources/images/title.png" class="center-block"/></a>
-      <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNew">Add Animal</button>
+      <button class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModalNew">Add Animal</button>
       <hr>
       <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
       <hr>

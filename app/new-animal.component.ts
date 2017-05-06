@@ -12,7 +12,7 @@ import { Animal } from './animal.model';
           <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
           <h1>New Animal</h1>
           <hr>
-          <div>
+            <div>
             <label>Species:</label>
             <input class="form-control" #newSpecies><br>
           </div>

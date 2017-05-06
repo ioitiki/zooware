@@ -1,5 +1,5 @@
 select {
-  font-size: 20px;
+  font-size: 30px;
   margin-bottom: 14px;
 }
 
@@ -8,7 +8,7 @@ select {
 }
 
 #home-icon {
-  margin-top: 6px;
+  margin-top: 12px;
   margin-bottom: 3px;
   width: 50px;
   height: 58px;
@@ -21,17 +21,27 @@ select {
   font-variant-caps: small-caps;
 }
 
+#about-title {
+  text-align: left;
+}
+
+#edit {
+  float: right;
+}
+
 td {
-  font-size: 17px;
+  font-size: 20px;
   font-weight: bold;
   font-family: monospace;
 }
 
 .panel-heading {
-  font-size: 25px;
+  font-size: 35px;
   font-weight: bold;
 }
 
 .btn {
   font-variant-caps: small-caps;
+  color: white;
+  font-size: 30px;
 }
