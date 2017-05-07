@@ -6,9 +6,9 @@ import { NewAnimalComponent } from './new-animal.component';
   selector: 'animal-list',
   template: `
   <select (change)="onChange($event.target.value)">
-    <option value="all">All Aniamls</option>
-    <option value="youngAnimal">Young Aniamls</option>
-    <option value="matureAnimal">Mature Aniamls</option>
+    <option value="all">All Animals</option>
+    <option value="youngAnimal">Young Animals</option>
+    <option value="matureAnimal">Mature Animals</option>
     <option value="meatAnimal">Meat Eating Animals</option>
   </select>
   <div *ngIf="filterByAge==='all'">
