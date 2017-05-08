@@ -1,5 +1,5 @@
 body {
-  background-color: lightgray;
+  background-color: darkgray;
 }
 select {
   font-size: 30px;
@@ -23,6 +23,12 @@ select {
 
 #about-txt {
   text-align: center;
+  margin-bottom: 20px;
+}
+
+#favicon {
+  width: 30px;
+  height: 36px;
 }
 
 .wrapper {
@@ -57,14 +63,21 @@ select {
 }
 
 td {
-  font-size: 20px;
+  font-size: 27px;
   font-weight: bold;
   font-family: monospace;
 }
 
 .panel-heading {
-  font-size: 35px;
+  font-size: 40px;
   font-weight: bold;
+  margin-top: 8px;
+}
+
+.panel {
+  box-shadow: 10px 10px 5px grey;
+  background-color: black;
+  color: white;
 }
 
 .btn {
