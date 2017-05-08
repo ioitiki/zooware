@@ -17,6 +17,14 @@ select {
   height: 58px;
 }
 
+#about-img {
+  width: 100%;
+}
+
+#about-txt {
+  text-align: center;
+}
+
 .wrapper {
     min-height: 100%;
     height: auto !important;
